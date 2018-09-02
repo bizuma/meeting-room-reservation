@@ -37,6 +37,8 @@ Application 을 재 가동하면 DB 가 초기화된다.
 
 ## Component 구조
 
+![image-component](https://github.com/bizuma/meeting-room-reservation/blob/master/component.png)
+
 - meeting-room-reservation-boot-app
   - Spring boot application
 - meeting-room-reservation-api
@@ -51,6 +53,7 @@ Application 을 재 가동하면 DB 가 초기화된다.
 
 ## Domain 구조
 
+![image-domain](https://github.com/bizuma/meeting-room-reservation/blob/master/domain.png)
 
 - Customer : 예약 가능한 고객
 - Reservation : 예약
