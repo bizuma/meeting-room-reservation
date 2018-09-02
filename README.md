@@ -22,7 +22,7 @@ Spring Boot 2.0.3.RELEASE
    Remote Repository는 제공하지 않으므로 Local 에서 최초 빌드를 해야한다.
    ```
 
-3. cd meeting-room-reservation-boot-app
+3. cd meeting-room-reservation/meeting-room-reservation-boot-app
 
 4. mvn spring-boot : run
 
