@@ -94,11 +94,7 @@
 				    	  var hour = data[i].hour;
 				    	  var meetingRoomName = data[i].meetingRoom.name;
 				    	
-				    	  var deleteA = '<a href="#" onclick="return deleteCustomer('+customerId+')">삭제</a> ';
-				    	  var detailA = '<a href="#" onclick="return showCustomer('+customerId+', \''+name+'\')">상세</a> ';			    	
-						  var actionTd = '<td>'+deleteA+detailA+ '</td>';
-						  
-				    	  table.append('<tr><td>'+reservationId+'</td><td>'+day+'</td><td>'+hour+'</td><td>'+meetingRoomName+'</td>'+actionTd+'</tr>');
+				    	  table.append('<tr><td>'+reservationId+'</td><td>'+day+'</td><td>'+hour+'</td><td>'+meetingRoomName+'</td></tr>');
 				      }
 	            }, error : function(xhr, ajaxOptions, throwError) {
 	            	if(xhr.status == '404') { // 로그인 하지 않고 접
@@ -268,7 +264,6 @@
 				<td width="100px">day</td>
 				<td width="100px">hour</td>
 				<td width="100px">meeting room</td>
-				<td width="*">Action</td>
 			</tr>
 		</thead>
 		<tbody id="reservation_table_body">
