@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/constants.js"></script>
+	<script type="text/javascript">
+	
+	function login() {
+		var loginInfo = {
+				username : $('#username').val(),
+				password : $('#password').val()
+		}
+		
+		$.ajax({
+            url: REESERVATION_URL.LOGIN,
+            type: 'POST',
+            data: loginInfo,
+            success: function (data, textStatus, xhr) {
+            	if(xhr.status == '200') {
+            		alert('로그인성공');
+    				location.href = "customer.html"	
+            	}
+            },
+            fail : function (xhr, textStatus) {
+            	alert('로그인실패');
+            }, error : function(xhr, ajaxOptions, throwError) {
+            	alert('장애발생');
+		    }
+        });
+	}
+	
+	</script>
+</head>
+<body>
+<h2>Login Page</h2>
+ID : <input type="text" value="admin" id="username" width="200px">
+PASSWORD : <input type="password" value="admin" id="password" width="200px">
+<input type="button" value = "로그인" onclick="login()">
+
+<br/>
+<br/>
+<div>
+	초기 계정
+	<ul>
+		<li> admin/admin :: ROLE->ADMIN</li>
+		<li> guest/guest :: ROLE->GUEST</li>
+	</ul>
+</div>
+
+</body>
+</html>
